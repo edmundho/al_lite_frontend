@@ -1,7 +1,7 @@
 var path = require("path");
 
 module.exports = {
-  entry: "./frontend/al_lite.jsx",
+  entry: "./frontend/autolist_lite.jsx",
   output: {
     path: path.resolve(__dirname),
     filename: "./bundle.js"
