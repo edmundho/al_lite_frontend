@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ListingItem = ({ car }) => {
-
-  return (
+const ListingItem = ({ car }) => (
     <div className="car-listing">
-      <Link to="/">
+      <Link to={`/car/${car.vin}`}>
         <img src={car.primary_photo_url} alt={car.model}/>
         <div className="listing-stats">
           <span className="listing-title">
@@ -18,6 +16,5 @@ const ListingItem = ({ car }) => {
       </Link>
     </div>
   );
-};
 
 export default ListingItem;

@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import ListingItem from './listing_item';
-// import { Link } from 'react-router-dom';
 import Pages from './pages';
 
 class Listings extends Component {
   constructor (props) {
     super(props);
-
-    // this.state = {
-    //   page: this.props.page,
-    //   min: this.props.min,
-    //   max: this.props.max
-    // };
   }
 
   componentWillMount () {
