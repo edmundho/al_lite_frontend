@@ -25,8 +25,8 @@ class Listings extends Component {
   }
   
   render () {
-    let count;
-    let formattedCount;
+    let count = 0;
+    let formattedCount = 0;
     let cars;
     let listings;
 
@@ -53,12 +53,12 @@ class Listings extends Component {
         <h3>
           {formattedCount} results
         </h3>
+        {listings}
         <Pages 
-          count={count ? count : 0} 
+          count={count} 
           page={this.props.page}
           min={this.props.min}
           max={this.props.max} />
-        {listings}
       </div>
     );
   }

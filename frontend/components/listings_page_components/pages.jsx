@@ -9,7 +9,7 @@ const Pages = ({ count, page, min, max }) => {
       <Link 
         key={i}
         className="listing-page-num" 
-        to={`/listings/${p}/${min}/${max}`}>{p}</Link>
+        to={`/listings/${min}/${max}/${p}`}>{p}</Link>
     );
   });
 
@@ -17,7 +17,9 @@ const Pages = ({ count, page, min, max }) => {
     <div>
       {pages}
       &nbsp;...&nbsp;
-      <Link className="listing-page-num" to={`/listings/${lastPage}/${min}/${max}`}>{lastPage}</Link>
+      <Link 
+        className="listing-page-num" 
+        to={`/listings/${min}/${max}/${lastPage}`}>{lastPage}</Link>
     </div>
   );
 };

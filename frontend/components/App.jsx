@@ -8,7 +8,10 @@ export default ({ store }) => (
   <Provider store={store}>
     <HashRouter>
       <div>
-        <Route path="/listings/:page/:min/:max" component={ListingsPageContainer} />
+        <Route
+          path="/listings/:min/:max/:page"
+          component={ListingsPageContainer}
+        />
         <Route exact path="/" component={HomePageContainer} />
       </div>
     </HashRouter>

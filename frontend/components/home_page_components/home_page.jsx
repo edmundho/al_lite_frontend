@@ -14,7 +14,7 @@ class HomePage extends Component {
 
   handleSubmit (e) {
     e.preventDefault();
-    this.props.history.push(`/listings/1/${this.state.min}/${this.state.max}`);
+    this.props.history.push(`/listings/${this.state.min}/${this.state.max}/1`);
   }
 
   update (property) {
