@@ -6,18 +6,15 @@ class HomePage extends Component {
 
     this.state = {
       min: 0,
-      max: 1/0
+      max: 100000000
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit () {
-    this.props.receiveCars(1, this.state.min, this.state.max)
-      .then(response => {
-        console.table(response.cars.records);
-        this.props.history.push('/listings/');
-      });
+  handleSubmit (e) {
+    e.preventDefault();
+    this.props.history.push(`/listings/1/${this.state.min}/${this.state.max}`);
   }
 
   update (property) {

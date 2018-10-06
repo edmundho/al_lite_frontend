@@ -2,8 +2,11 @@ import { connect } from 'react-redux';
 import { receiveCars } from '../../actions/cars_actions';
 import ListingsPage from './listings_page';
 
-const mapStateToProps = (state = {}) => ({
-  cars: state.entities.cars
+const mapStateToProps = (state = {}, ownProps) => ({
+  cars: state.entities.cars,
+  page: ownProps.match.params.page,
+  min: ownProps.match.params.min,
+  max: ownProps.match.params.max
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const store = configureStore();
   
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
   
-  window.fetchCars = fetchCars;
-  window.receiveAllCars = receiveAllCars;
-  window.receiveCars = receiveCars;
-  
+  // window.fetchCars = fetchCars;
+  // window.receiveAllCars = receiveAllCars;
+  // window.receiveCars = receiveCars;
+
   ReactDOM.render(<App store={store} />, rootEl);
 });
